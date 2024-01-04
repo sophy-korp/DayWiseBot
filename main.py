@@ -40,7 +40,7 @@ def handle_write_note(message):
 
 @bot.message_handler(func=lambda message: message.text == "Show notes")
 def handle_show_notes(message):
-    bot.send_message(message.chat.id, "Please enter the date (DD-MM-YYYY) for which you want to see the notes:")
+    bot.send_message(message.chat.id, "Please enter the date (DD-MM-YYYY) you want to see the notes for:")
     bot.register_next_step_handler(message, show_notes)
 
 
